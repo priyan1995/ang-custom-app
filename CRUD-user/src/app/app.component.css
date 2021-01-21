@@ -1,0 +1,23 @@
+.pd-top-bar{
+    text-align: center;
+    background: #38a3ff82;
+    padding: 10px;
+    color: white;
+}
+
+.pd-top-bar  h2{
+    text-align: center;
+    width: 100%;
+}
+
+.pd-footer{
+    background: #4c4c4c;
+    padding: 10px;
+    color: white;
+}
+
+.pd-footer p{
+    margin-bottom: 0;
+    text-align: center;
+    width: 100%;
+}

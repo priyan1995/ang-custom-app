@@ -1,4 +1,6 @@
+import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
+import { ReactiveFormsModule, ɵInternalFormsSharedModule } from "@angular/forms";
 import { CreateComponent } from "./create/create.component";
 import { EditComponent } from "./edit/edit.component";
 import { UsersComponent } from "./users.component";
@@ -14,7 +16,9 @@ const component = [
 @NgModule({
     declarations: component,
     imports: [
-        UserRoutingModule
+        UserRoutingModule,
+        CommonModule,
+        ReactiveFormsModule
     ],
     exports: component
 })

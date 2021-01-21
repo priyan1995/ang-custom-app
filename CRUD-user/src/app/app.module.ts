@@ -9,10 +9,7 @@ import { EditComponent } from './users/edit/edit.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    UsersComponent,
-    CreateComponent,
-    EditComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,

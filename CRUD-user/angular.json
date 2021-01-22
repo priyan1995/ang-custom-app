@@ -12,7 +12,7 @@
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
-          "options": {
+          "options": {           
             "outputPath": "dist/CRUD-user",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -62,7 +62,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "CRUD-user:build"
+            "browserTarget": "CRUD-user:build",
+            "proxyConfig": "src/proxy.conf.json"
           },
           "configurations": {
             "production": {

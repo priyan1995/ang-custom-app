@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   appName: "Sample Application",
-  apiUrl: 'localhost/TestProj'
+  apiUrl: 'http://localhost/TestProj'
 };
 
 /*

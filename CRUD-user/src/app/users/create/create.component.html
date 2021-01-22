@@ -4,35 +4,65 @@
             <div class="col-12">
                 <h3>Create New User</h3>
                 <br>
-                <form [formGroup]="createUser">
+                <form [formGroup]="createUser" (ngSubmit)="createuser()">
 
                     <div class="form-group">
                         <label>First Name</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" formControlName="first_name">
+                        <div class="text-danger">
+                            <div
+                                *ngIf="createUser.controls['first_name'].invalid && ( createUser.controls['first_name'].dirty || createUser.controls['first_name'].touched )">
+                                First name is required.
+                            </div>
+                        </div>
                     </div>
 
                     <div class="form-group">
                         <label>Last Name</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" formControlName="last_name">
+                        <div class="text-danger">
+                            <div
+                                *ngIf="createUser.controls['last_name'].invalid && ( createUser.controls['last_name'].dirty || createUser.controls['last_name'].touched )">
+                                First name is required.
+                            </div>
+                        </div>
                     </div>
 
                     <div class="form-group">
                         <label>Email</label>
-                        <input type="email" class="form-control">
+                        <input type="email" class="form-control" formControlName="email">
+                        <div class="text-danger">
+                            <div
+                                *ngIf="createUser.controls['email'].invalid && ( createUser.controls['email'].dirty || createUser.controls['email'].touched )">
+                                Email is required.
+                            </div>
+                        </div>
                     </div>
 
                     <div class="form-group">
                         <label>Phone</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" formControlName="phone">
+                        <div class="text-danger">
+                            <div
+                                *ngIf="createUser.controls['phone'].invalid && ( createUser.controls['phone'].dirty || createUser.controls['phone'].touched )">
+                                Phone is required.
+                            </div>
+                        </div>
                     </div>
 
                     <div class="form-group">
                         <label>Address</label>
-                        <textarea class="form-control"></textarea>
+                        <textarea class="form-control" formControlName="address"></textarea>
+                        <div class="text-danger">
+                            <div
+                                *ngIf="createUser.controls['address'].invalid && ( createUser.controls['address'].dirty || createUser.controls['address'].touched )">
+                                Address is required.
+                            </div>
+                        </div>
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>               
+                    <button type="submit" class="btn btn-primary" [disabled]="!createUser.valid">Submit</button>
+                </form>
 
             </div>
             <div class="col-12">
